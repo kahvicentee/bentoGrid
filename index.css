@@ -1,0 +1,356 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+:root {
+  --roxo-principal: #6C5CE7;
+  --amarelo: #FDCB6E;
+  --amarelo-escuro: #E1A93A;
+  --laranja-suave: #FFEAA7;
+  --branco: #FFFFFF;
+  --cinza-claro: #F5F6FA;
+  --cinza-medio: #DCDDE1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--cinza-claro);
+}
+
+.container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 80px;
+    gap: 10px;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 10px;
+}
+
+.create, .content {
+    grid-row: span 3;
+}
+
+.content, .consistent {
+    background-color: var(--amarelo);
+}
+
+.create {
+    gap: 25px;
+    padding: 0px 20px;
+    background-color: var(--laranja-suave);
+}
+
+.create h1 {
+    font-size: 26px;
+}
+
+.create span {
+    color: var(--roxo-principal);
+    font-style: italic;
+}
+
+.create img {
+    width: 150px;
+}
+
+.content {
+    padding: 0px 18px;
+    gap: 15px;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 25px;
+}
+
+.content img {
+    width: 150px;
+}
+
+.social {
+    grid-column: span 2;
+    grid-row: span 2;
+    color: var(--branco);
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 0px 25px;
+}
+
+.social h1 {
+    font-size: 35px;
+}
+
+.social h1 .porcent {
+    color: var(--amarelo);
+}
+
+.social h1 .it {
+    font-style: italic;
+}
+
+.social img {
+    width: 150px;
+}
+
+.social p {
+    font-weight: 300;
+}
+
+.social, .followers {
+    background-color: var(--roxo-principal);
+}
+
+.schedule {
+    grid-row: span 4;
+    background-color: var(--cinza-medio);
+    align-items: center;
+    gap: 20px;
+}
+
+.schedule h1 {
+    font-size: 24px;
+    padding: 0px 20px;
+}
+
+.schedule img {
+    width: 160px;
+}
+
+.schedule p {
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0px 15px;
+}
+
+.create, .social, .content, .schedule, .growth, .platforms, .consistent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.followers {
+    grid-column: span 2;
+    grid-row: span 2;
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.followers h1 {
+    font-size: 30px;
+    width: 210px;
+}
+
+.followers img {
+    width: 150px;
+}
+
+.platforms, .growth, .consistent {
+    grid-row: span 2;
+}
+
+.platforms {
+    gap: 10px;
+}
+
+.platforms img {
+    width: 180px;
+}
+
+.platforms h1 {
+    font-size: 22px;
+    padding: 0px 15px;
+}
+
+.consistent {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.consistent h1 {
+    padding: 8px 25px;
+    font-size: 22px;
+}
+
+.consistent img {
+    width: 95px;
+}
+
+.growth {
+    gap: 15px;
+    padding: 0px 12px;
+}
+
+.growth h1 {
+    font-size: 38px;
+}
+
+.growth p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.growth img {
+    align-self: center;
+    width: 130px;
+}
+
+.attribution a {
+    color: var(--roxo-principal);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px 0px 10px 0px;
+    }
+
+    .create {
+        grid-column: span 2;
+        grid-row: span 2;
+        align-items: center;
+    }
+
+    .consistent {
+        grid-row: span 3;
+    }
+
+    .consistent h1 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .consistent img {
+        width: 180px;
+    }
+
+    .social,
+    .followers {
+        grid-column: span 2;
+    }
+
+    .followers {
+        gap: 30px   ;
+    }
+
+    .attribution {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 80%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+
+    .create, .growth, .platforms {
+        grid-row: span 2;
+    }
+
+    .create {
+        gap: 12px;
+    }
+
+    .create h1 {
+        font-size: 30px;
+        padding: 0px 15px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        padding: 0px 15px;
+        text-align: center;
+    }
+
+    .schedule {
+        grid-row: span 5;
+        gap: 25px;
+    }
+
+    .schedule h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .schedule img {
+        width: 250px;
+    }
+
+    .schedule p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .platforms img {
+        align-self: center;
+        width: 280px;
+    }
+
+    .consistent h1 {
+        margin-top: 18px;
+        font-size: 30px;
+    }
+
+    .growth {
+        padding: 0px 15px;
+        gap: 10px;
+    }
+
+    .growth p {
+        font-size: 18px;
+    }
+
+    .growth img {
+        width: 180px;
+    }
+
+    .followers {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .followers h1 {
+        width: auto;
+        text-align: center;
+        padding: 0px 25px;
+    }
+}
