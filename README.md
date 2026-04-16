@@ -4,7 +4,8 @@
 <br>
 
 🚀 Challenge by [Frontend Mentor](https://www.frontendmentor.io?ref=challenge)  <br>
-👩🏻‍💻 Coded by [Karina Vicente](https://github.com/kahvicentee) 
+👩🏻‍💻 Coded by [Karina Vicente](https://github.com/kahvicentee) <br>
+🌐 Here you can see this [Project](https://kahvicentee.github.io/bentoGrid/)
 
 ## 🔧 Built with
 - HTML5
